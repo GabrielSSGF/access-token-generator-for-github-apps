@@ -1,4 +1,4 @@
-module jwt-generator
+module access-token-generator
 
 go 1.18
 

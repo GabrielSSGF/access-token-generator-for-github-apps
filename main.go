@@ -37,11 +37,6 @@ func generateTokenHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-
-	if initialToken != correctToken {
-		http.Error(w, "Authentication Failed", http.StatusUnauthorized)
-		return
-	}
 	
 	// Você pode pegar a credencial da AWS Secret Manager
 	pemSecret, err := getAWSSecret()
